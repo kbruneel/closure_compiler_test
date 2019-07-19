@@ -1,0 +1,13 @@
+{
+    "name": "main",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "author": "Karel Bruneel",
+    "dependencies": {
+        "pkg-1": "file:../pkg-1"
+    },
+    "scripts": {
+        "build" : "java -jar compiler.jar --js='main.js' --js='package.json'  --js='node_modules/pkg-1/package.json' --js='./main/node_modules/**/*.js'  --entry_point='main.js' --module_resolution=NODE --dependency_mode=STRICT --warning_level VERBOSE --process_common_js_modules"        
+    }
+}
